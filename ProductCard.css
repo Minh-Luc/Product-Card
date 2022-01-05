@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background:linear-gradient(to right, #4dafa2, #3d4588)
+}
+
+.card{
+    margin: 100px auto;
+    width: 320px;
+    height: 400px;
+    background: rgb(70, 70, 70);
+    border-radius: 15px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+.card_like, .card_cart{
+    font-size: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+.card_cart{
+    right: 20px;
+}
+.card_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card_image{
+    transition: 0.5s;
+}
+.card_title{
+    text-align: center;
+    font-size: 25px;
+    color: #4dafa2;
+    transition: 0.5s;
+}
+.card_price{
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.card_size, .card_color{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card_size span{
+    padding: 1px 10px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.card_color span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.card_color_black{
+    background: black;
+}
+.card_color_white{
+    background: white;
+}
+.card_color_red{
+    background: red;
+}
+.card_button button{
+    background: #4dafa2;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 35px;
+}
+.card_button_add{
+    right: 20px;
+}
+
+.card:hover .card_image{
+    transform: translateY(-90px) rotate(-15deg);
+    
+}
+.card:hover .card_title{
+    transform: translate(-88px,-70px);
+}
+.card:hover .card_price{
+    transform: translate(-122px,-70px);
+}
+.card_size{
+    margin-top: 150px;
+}
+.card_size,.card_color,.card_button{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s;
+    /*transition-delay: 0.3s;*/
+}
+.card:hover .card_size{
+    margin-top: -30px;
+}
+.card:hover .card_size, .card:hover .card_color, .card:hover .card_button{
+    visibility: visible;
+    opacity: 100;
+}
+.card_button button:hover{
+    transform: scale(0.9);
+}
